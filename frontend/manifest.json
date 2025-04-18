@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Clarify",
+  "version": "1.0.0",
+  "description": "Instantly clarify the doubts or get explanation for the selected texts using AI",
+  "permissions": ["scripting", "activeTab", "storage", "contextMenus"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
